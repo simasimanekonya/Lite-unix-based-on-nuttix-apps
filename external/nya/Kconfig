@@ -1,0 +1,25 @@
+config EXTERNAL_NYA
+    tristate "\"Nya, World!\" example"
+    default n
+    ---help---
+        Enable the \"Nya, World!\" example
+
+if EXTERNAL_NYA
+
+config EXTERNAL_NYA_PROGNAME
+    string "Program name"
+    default "nya"
+    depends on BUILD_LOADABLE
+    ---help---
+        This is the name of the program that will be used when the NSH ELF
+        program is installed.wooooooooooooo
+
+config EXTERNAL_NYA_PRIORITY
+    int "Nya task priority"
+    default 100
+
+config EXTERNAL_NYA_STACKSIZE
+    int "Nya stack size"
+    default 2048
+
+endif
